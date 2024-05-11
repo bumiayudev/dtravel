@@ -1,11 +1,12 @@
 import { ReactNode } from "react"
 
 type Props = {
-    children: ReactNode
+    children: ReactNode,
+    size? : string
 }
-const Container = ({ children }: Props)=>{
+const Container = ({ children, size}: Props)=>{
     return (
-        <div className="max-w-screen-xl mx0auto">
+        <div className={`${size == 'xl' ? 'max-w-screen-xl' : 'max-w-screen-lg'} max-auto`}>
             {children}
         </div>
     )
